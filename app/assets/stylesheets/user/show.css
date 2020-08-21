@@ -1,0 +1,24 @@
+h3{
+  font-size: 30px;
+}
+
+h5{
+  font-size: 20px;
+  margin: 30px;
+}
+
+.chat-form{
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-main{
+  display: flex;
+  justify-content: center;
+}
+
+.chat-all{
+  display: flex;
+  justify-content: center;
+}

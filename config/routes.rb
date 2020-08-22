@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  get 'chats/index'
+  devise_for :users
   root to: "chats#index"
+  get 'chats/index'
+
+  resources :users, only: [:show, :edit, :update]
 end

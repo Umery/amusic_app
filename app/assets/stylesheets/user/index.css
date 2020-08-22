@@ -70,3 +70,81 @@ body {
   margin-left: 60vw;
   margin-top: -5vh;
 }
+
+@media (max-width: 1024px) {
+  .leaning{
+    height: 272px;
+    width: 272px;
+    line-height: 272px;
+    font-size: 32px;
+  }
+  
+  .question{
+    height: 180px;
+    width: 180px;
+    line-height: 180px;
+    font-size: 27px;
+  }
+  
+  .playing{
+    height: 224px;
+    width: 224px;
+    line-height: 224px;
+    font-size: 32px;
+  }
+  
+  .fake-btn1{
+    height: 56px;
+    width: 56px;
+  }
+  
+  .fake-btn2{
+    height: 112px;
+    width: 112px;
+  }
+  
+  .fake-btn3{
+    height: 96px;
+    width: 96px;
+  }
+ }
+
+ @media (max-width: 599px) {
+  .leaning{
+    height: 204px;
+    width: 204px;
+    line-height: 204px;
+    font-size: 24px;
+  }
+  
+  .question{
+    height: 240px;
+    width: 240px;
+    line-height: 240px;
+    font-size: 36px;
+    margin-top: -64px;
+    margin-left: 56vw;
+  }
+  
+  .playing{
+    height: 168px;
+    width: 168px;
+    line-height: 168px;
+    font-size: 24px;
+  }
+  
+  .fake-btn1{
+    height: 48px;
+    width: 48px;
+  }
+  
+  .fake-btn2{
+    height: 70px;
+    width: 70px;
+  }
+  
+  .fake-btn3{
+    height: 72px;
+    width: 72px;
+  }
+ }

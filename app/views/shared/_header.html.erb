@@ -1,0 +1,20 @@
+<header class='top-page-header'>
+  <div class='search-bar-contents'>
+    <%= link_to image_tag("amusic-logo.png", class: "amusic-icon"), "/" %>
+    <%#= image_tag "title-image.png", class: 'title-image' %>
+  </div>
+  <div class='nav'>
+    <div class='lists-left'>
+      今更じゃない！何歳からでも楽しく学べる音楽
+    </div>
+    <ul class='lists-right'>
+    <% if user_signed_in? %>
+      <li><%= link_to current_user.name, "users/show", class: "user-name" %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+    <% else %>
+      <li><%= link_to 'ログイン', "users/sign_in", class: "login" %></li>
+      <li><%= link_to '新規登録', "users/sign_up", class: "sign-up" %></li>
+    <% end %>
+    </ul>
+  </div>
+</header>

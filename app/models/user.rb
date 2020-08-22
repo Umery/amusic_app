@@ -12,6 +12,6 @@ class User < ApplicationRecord
 
     validates :password, length: { minimum: 6 },
                          format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,100}+\z/i,
-                                   message: "は半角英数と半角数字を混合させてください" }
+                                   message: 'は半角英数と半角数字を混合させてください' }
   end
 end

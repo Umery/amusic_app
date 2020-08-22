@@ -34,7 +34,6 @@
   border: 1px solid #ccc;
   background: #fff;
   font-size: 16px;
-  resize: none;
 }
 
 .register-btn {
@@ -90,5 +89,10 @@
 
 .login-flash-message {
   text-align: center;
+  color: red;
+}
+
+#name-error-message, #email-error-message1, #email-error-message2 , #password-error-message1, #password-error-message2, #password-error-message3, #password-confirmation-error-message {
+  display: none;
   color: red;
 }

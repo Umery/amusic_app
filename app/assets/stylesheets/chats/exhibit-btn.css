@@ -20,3 +20,7 @@
 .question-btn-icon {
   width: 60%;
 }
+
+.question-btn:hover{
+  background-color: #5c5c5c;
+}

@@ -1,6 +1,9 @@
 ja:
- activerecord:
-   attributes:
-     user:
-       name: 名前
-       instrument: 楽器
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+        instrument: 楽器
+      chat:
+        content: 質問内容
+        category_id: カテゴリー

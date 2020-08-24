@@ -51,6 +51,7 @@ body {
   border-radius: 50%;
   margin-left: 60vw;
   margin-top: -40vh;
+  cursor: pointer;
 }
 
 .fake-btn2{
@@ -60,6 +61,7 @@ body {
   border-radius: 50%;
   margin-top: 20vh;
   margin-left: 30px;
+  cursor: pointer;
 }
 
 .fake-btn3{
@@ -68,7 +70,24 @@ body {
   width: 120px;
   border-radius: 50%;
   margin-left: 60vw;
-  margin-top: -5vh;
+  margin-top: -10vh;
+  cursor: pointer;
+}
+
+.leaning:hover, .question:hover, .playing:hover{
+  background-color: #5c5c5c;
+}
+
+.fake-btn1:hover{
+  background-color: #945959;
+}
+
+.fake-btn2:hover{
+  background-color: #849459;
+}
+
+.fake-btn3:hover{
+  background-color: #7c5994;
 }
 
 @media (max-width: 1024px) {

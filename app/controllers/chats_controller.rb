@@ -1,5 +1,5 @@
 class ChatsController < ApplicationController
-  before_action :authenticate_user!, only: :new
+  before_action :authenticate_user!, only: [:new, :show, :edit]
 
   def index
     @chats = Chat.all.order("created_at DESC")
@@ -16,6 +16,10 @@ class ChatsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @chat = Chat.find(params[:id])
   end
 
   private

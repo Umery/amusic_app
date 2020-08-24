@@ -6,6 +6,7 @@ body {
 .special-btn{
   text-decoration: none;
   color: white;
+  font-size: 40px;
 }
 
 .leaning{
@@ -15,7 +16,6 @@ body {
   border-radius: 50%;
   text-align:center;
   line-height: 340px;
-  font-size: 40px;
   margin-top: 5vh;
   margin-left: 20vw;
 }
@@ -27,7 +27,6 @@ body {
   border-radius: 50%;
   text-align:center;
   line-height: 300px;
-  font-size: 45px;
   margin-top: -80px;
   margin-left: 70vw;
 }
@@ -39,7 +38,6 @@ body {
   border-radius: 50%;
   text-align:center;
   line-height: 280px;
-  font-size: 40px;
   margin-top: -50px;
   margin-left: 10vw;
 }

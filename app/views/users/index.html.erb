@@ -1,17 +1,26 @@
 <%= render "shared/header" %>
 <body>
 <div class = "main">
-  <div class="leaning">
-    <%= link_to "learning", '#', class: 'special-btn' %>
-  </div>
+  
+  <%= link_to root_path do %>
+    <div class="leaning">
+      <h3 class="special-btn">leaning</h3>
+    </div>
+  <%end%>
   <div class="fake-btn1"></div>
+  
   <div class="fake-btn2"></div>
-  <div class="question">
-    <%= link_to "question", chats_path, class: 'special-btn' %>
-  </div>
-  <div class="playing">
-    <%= link_to "playing", '#', class: 'special-btn' %>
-  </div>
+
+  <%= link_to chats_path do %>
+    <div class="question">
+      <h3  class= 'special-btn'>question</h3>
+    </div>
+  <%end%>
+  <%= link_to root_path do %>
+    <div class="playing">
+      <h3 class= 'special-btn' >playing</h3>
+    </div>
+  <%end%>
   <div class="fake-btn3"></div>
 </div>
 </body>

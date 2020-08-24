@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'users/index'
 
   resources :users, only: [:show, :edit, :update]
-  resources :chats, only: [:index, :new, :create, :show, :edit, :update]
+  resources :chats
 end

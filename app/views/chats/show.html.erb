@@ -10,6 +10,7 @@
     <h5 class="mypage-btn">↑マイページへは名前をクリック</h5>
     <% if user_signed_in? && current_user.id == @chat.user.id%>
       <%= link_to "編集する", edit_chat_path, class: 'btn'%>
+      <%= link_to "削除する", chat_path, method: :delete, class: 'btn'%>
     <% end %>
     <%= link_to "質問一覧に戻る", chats_path, class: 'btn'%>
   </div>

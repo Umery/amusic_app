@@ -33,6 +33,14 @@ class ChatsController < ApplicationController
     end
   end
 
+  def destroy
+    if @chat.destroy
+      redirect_to chats_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def chat_params

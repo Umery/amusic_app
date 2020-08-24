@@ -1,5 +1,6 @@
 class ChatsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :show, :edit]
+  before_action :set_chat, only: [:show, :edit, :update, :destroy]
 
   def index
     @chats = Chat.all.order("created_at DESC")
@@ -19,12 +20,26 @@ class ChatsController < ApplicationController
   end
 
   def show
-    @chat = Chat.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @chat.update(chat_params)
+      redirect_to action: :show
+    else
+      render :edit
+    end
   end
 
   private
 
   def chat_params
     params.require(:chat).permit(:category_id, :title, :content, :image).merge(user_id: current_user.id)
+  end
+
+  def set_chat
+    @chat = Chat.find(params[:id])
   end
 end

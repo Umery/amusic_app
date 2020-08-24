@@ -4,11 +4,12 @@
   <div class='account-page_header'>
     <h2>
       投稿者：
-      <%= link_to @chat.user.name, user_path, class: 'user-name' %>
+      <a href="/users/<%= @chat.user.id %>", class= 'user-name'>
+        <%= @chat.user.name %></a>
     </h2>
     <h5 class="mypage-btn">↑マイページへは名前をクリック</h5>
-    <% if user_signed_in? && current_user.id %>
-      <%= link_to "編集する", "/", class: 'btn'%>
+    <% if user_signed_in? && current_user.id == @chat.user.id%>
+      <%= link_to "編集する", edit_chat_path, class: 'btn'%>
     <% end %>
     <%= link_to "質問一覧に戻る", chats_path, class: 'btn'%>
   </div>

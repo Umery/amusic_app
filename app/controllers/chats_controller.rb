@@ -20,6 +20,8 @@ class ChatsController < ApplicationController
   end
 
   def show
+    @message = Message.new
+    @messages = @chat.messages.includes(:user)
   end
 
   def edit

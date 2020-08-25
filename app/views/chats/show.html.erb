@@ -41,4 +41,24 @@
   </div>
 </div>
 
+<div class="container">
+  <%= form_with(model: [@chat, @message], local: true) do |form| %>
+    <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+    <%= form.submit "SEND" %>
+  <% end %>
+  <div class="comments">
+    <h4>＜コメント一覧＞</h4>
+    <% if @messages.present? %>
+      <% @messages.each do |message| %>
+        <p>
+          <strong><%= link_to message.user.name, "/users/#{message.user_id}" %>：</strong>
+          <%= message.text %>
+        </p>
+      <% end %>
+    <% elsif %>
+      <h4>まだコメントはありません</h4>
+    <% end %>
+  </div>
+</div>
+
 <%= render "shared/footer"%>

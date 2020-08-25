@@ -1,3 +1,5 @@
+/* show, chat/showにも反映 */
+
 .account-page {
   width: 100%;
   background-color: #f8f8f8;
@@ -30,6 +32,10 @@
   background: #c7cedd;
   border: 1px solid #c7cedd;
   margin-right: 50px;
+}
+
+.btn:hover{
+  background: #7d818a;
 }
 
 .user-form{
@@ -67,4 +73,8 @@
   margin-bottom: 30px;
   background: #6f91da;
   border: 1px solid #6f91da;
+}
+
+.submit-btn:hover{
+  background: #4d6599;
 }

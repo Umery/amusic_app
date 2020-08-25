@@ -13,7 +13,7 @@
   flex-direction: column;
 }
 
-.chats-title{
+.chat-title{
   margin-bottom: -5vh;
   font-size: 25px;
   font-weight: bold;
@@ -112,6 +112,10 @@
   border: 1px solid #6f91da;
 }
 
+.chats-btn:hover{
+  background: #4d6599;
+}
+
 .back-btn {
   background: #aaa;
   border: 1px solid #aaa;
@@ -121,4 +125,8 @@
   letter-spacing: 1px;
   margin: 15px 30%;
   color: black;
+}
+
+.back-btn:hover{
+  background: rgb(85, 85, 85);
 }

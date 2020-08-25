@@ -87,6 +87,10 @@
   cursor: pointer;
 }
 
+.login-blue-btn:hover, .register-blue-btn:hover{
+  background: #4d6599;
+}
+
 .login-flash-message {
   text-align: center;
   color: red;

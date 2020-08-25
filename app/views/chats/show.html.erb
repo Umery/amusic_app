@@ -1,5 +1,6 @@
 <%= render "shared/second-header"%>
 
+<h2 class="account-title">質問詳細</h2>
 <div class='account-page'>
   <div class='account-page_header'>
     <h2>
@@ -7,7 +8,7 @@
       <a href="/users/<%= @chat.user.id %>", class= 'user-name'>
         <%= @chat.user.name %></a>
     </h2>
-    <h5 class="mypage-btn">↑マイページへは名前をクリック</h5>
+    <h5 class="page-btn">↑マイページへは名前をクリック</h5>
     <% if user_signed_in? && current_user.id == @chat.user.id%>
       <%= link_to "編集する", edit_chat_path, class: 'btn'%>
       <%= link_to "削除する", chat_path, method: :delete, class: 'btn'%>
@@ -46,7 +47,7 @@
     <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
     <%= form.submit "SEND" %>
   <% end %>
-  <div class="comments">
+  <div class="messages">
     <h4>＜コメント一覧＞</h4>
     <% if @messages.present? %>
       <% @messages.each do |message| %>

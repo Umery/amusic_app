@@ -1,3 +1,5 @@
+/* chat-headerのcssも同時に記述 */
+
 * {
   box-sizing: border-box;
 }
@@ -10,10 +12,35 @@
   background-color: #f8f8f8;
 }
 
-.search-bar-contents {
+.bar-contents {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #272727;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
 }
 
 .amusic-icon {
@@ -81,6 +108,11 @@
 }
 
 .sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
+.root{
   text-decoration: none;
   color: #333333;
 }

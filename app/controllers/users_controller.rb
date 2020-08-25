@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = current_user
     @name = current_user.name
     @instrument = current_user.instrument
-    # @chats = current_user.chats
+    @chats = current_user.chats
   end
 
   def edit

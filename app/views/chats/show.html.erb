@@ -1,0 +1,44 @@
+<%= render "shared/second-header"%>
+
+<div class='account-page'>
+  <div class='account-page_header'>
+    <h2>
+      投稿者：
+      <a href="/users/<%= @chat.user.id %>", class= 'user-name'>
+        <%= @chat.user.name %></a>
+    </h2>
+    <h5 class="mypage-btn">↑マイページへは名前をクリック</h5>
+    <% if user_signed_in? && current_user.id == @chat.user.id%>
+      <%= link_to "編集する", edit_chat_path, class: 'btn'%>
+      <%= link_to "削除する", chat_path, method: :delete, class: 'btn'%>
+    <% end %>
+    <%= link_to "質問一覧に戻る", chats_path, class: 'btn'%>
+  </div>
+  <div class='user-form'>
+    <h2 class="chat-name">
+      カテゴリー：
+      <%= @chat.category.name %>
+    </h2>
+    <h2 class="chat-name">
+      質問名：
+      <%if @chat.title.present?%>
+        <%= @chat.title %>
+      <% elsif %>
+        なし
+      <% end %>
+    </h2>
+    <div class="chat-content">
+      <span>質問内容：<%= @chat.content %></span>
+    </div>
+    <div class="chat-images">
+      画像：
+      <%if @chat.image.present?%>
+        <%= image_tag @chat.image.variant(resize:'700x500'), class: "chat-image", rel: "lightbox" %>
+      <% elsif %>
+        なし
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer"%>

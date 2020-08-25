@@ -3,7 +3,7 @@
 <div class='account-page'>
   <div class='account-page_header'>
     <h2><%= @name %>さんのマイページ</h2>
-    <% if user_signed_in? && current_user.id %>
+    <% if user_signed_in? && current_user.id == @user.id%>
       <%= link_to "編集する", edit_user_path, class: 'btn'%>
     <% end %>
     <%= link_to "トップページに戻る", root_path, class: 'btn'%>
@@ -21,14 +21,13 @@
 <div class='chat-form'>
   <div class='chat-main'>
     <h3><%= @name %>さんの質問一覧</h3>
-  </div>
-  <div class='chat-all'>
-    <% if @chat.nil? %>
+  <%# </div> %>
+  <%# <div class='chat-all'> %>
+    <% if @chat.present? %>
       <h5>まだ<%= @name %>さんの質問はありません</h5>
     <% else %>
-      <%# @chats.each do |chat| %>
-        <h1>あ</h1>
-      <%# end %>
+      <% @chats.each do |chat| %>
+      <% end %>
     <% end %>
   </div>
 </div>

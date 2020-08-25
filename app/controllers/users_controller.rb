@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: :edit
 
   def index
   end
@@ -8,7 +7,7 @@ class UsersController < ApplicationController
     @user = current_user
     @name = current_user.name
     @instrument = current_user.instrument
-    @chats = current_user.chats
+    @chats = current_user.chats.order('created_at DESC')
   end
 
   def edit

@@ -18,6 +18,11 @@
         <div class="chat-content-box">
           <span>質問内容：<%= chat.content %></span>
         </div>
+        <h3 class="chat-title">
+          <%if chat.image.present?%>
+            画像：あり
+          <% end %>
+        </h3>
       </div>
       <% end %>
     </li>

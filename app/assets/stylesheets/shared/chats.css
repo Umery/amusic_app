@@ -15,12 +15,12 @@
   width: 5vh;
   border: 0;
   cursor: pointer;
-  background-color: #272727;
+  background-color: #b4668c;
   padding: 8px;
 }
 
 .search-button:hover{
-  background-color: #5c5c5c;
+  background-color: #884d6a;
 }
 
 .search-icon {
@@ -35,4 +35,17 @@
 
 .root-btn:hover{
   color: #8f8e8e;
+}
+
+.chat-ad-footer-contents {
+  padding: 5vh 15vw;
+  background-color: #f8f8f8;
+}
+
+.chat-footer {
+  width: 100vw;
+  padding: 5vh 0;
+  color: #FFF;
+  background-color: #b4668c;
+  text-align: center;
 }

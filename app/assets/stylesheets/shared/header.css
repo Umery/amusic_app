@@ -54,6 +54,13 @@
   font-size: 25px;
 }
 
+.users-name {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+  font-size: 25px;
+}
 
 .logout {
   text-decoration: none;
@@ -75,6 +82,6 @@
   font-size: 20px;
 }
 
-.user-name:hover, .logout:hover, .login:hover, .sign-up:hover{
+.users-name:hover, .logout:hover, .login:hover, .sign-up:hover{
   color: #8f8e8e;
 }

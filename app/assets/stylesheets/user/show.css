@@ -20,3 +20,16 @@ h5{
   justify-content: center;
   width: 20vw;
 }
+
+.chat-info {
+  height: 250px;
+  width: 100%;
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+  overflow: scroll;
+}
+
+.chat-info:hover{
+  background-color: #aaaaaa2d;
+}

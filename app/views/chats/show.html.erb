@@ -1,4 +1,4 @@
-<%= render "shared/second-header"%>
+<%= render "shared/chat-second-header"%>
 
 <h2 class="account-title">質問詳細</h2>
 <div class='account-page'>
@@ -43,10 +43,12 @@
 </div>
 
 <div class="container">
-  <%= form_with(model: [@chat, @message], local: true) do |form| %>
-    <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-    <%= form.submit "SEND" %>
-  <% end %>
+  <div class="message-area">
+    <%= form_with(model: [@chat, @message], local: true) do |form| %>
+      <%= form.text_area :text, placeholder: "コメントする", rows: "2", class: "message-content" %>
+      <%= form.submit "SEND", class: "message-btn" %>
+    <% end %>
+  </div>
   <div class="messages">
     <h4>＜コメント一覧＞</h4>
     <% if @messages.present? %>
@@ -62,4 +64,4 @@
   </div>
 </div>
 
-<%= render "shared/footer"%>
+<%= render "shared/chat-footer"%>

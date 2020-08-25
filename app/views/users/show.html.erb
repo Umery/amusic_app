@@ -32,7 +32,7 @@
         <% @chats.each do |chat| %>
           <li class='list'>
             <%= link_to chat_path(chat.id) do %>
-              <div class="chats-info">
+              <div class="chat-info">
                 <h3 class="chats-title">
                   カテゴリー：
                   <%= chat.category.name %>

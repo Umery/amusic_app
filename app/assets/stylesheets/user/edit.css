@@ -71,10 +71,11 @@
   padding: 0 30px;
   letter-spacing: 1px;
   margin-bottom: 30px;
-  background: #6f91da;
-  border: 1px solid #6f91da;
+  background: #272727;
+  border: 1px solid #272727;
+  color: #f8f8f8;
 }
 
 .submit-btn:hover{
-  background: #4d6599;
+  background: #888888;
 }

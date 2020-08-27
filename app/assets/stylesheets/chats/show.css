@@ -101,6 +101,7 @@
 .user-messages{
   color: black;
   font-weight: bold;
+  height: 20px;
 }
 
 .user-messages:hover {

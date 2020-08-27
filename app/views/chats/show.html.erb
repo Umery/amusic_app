@@ -44,13 +44,14 @@
 
 <div class="container">
   <div class="message-area">
-    <%= form_with(model: [@chat, @message], local: true) do |form| %>
-      <%= form.text_area :text, placeholder: "コメント欄", rows: "2", class: "message-content" %>
-      <%= form.submit "コメントする", class: "message-btn" %>
+    <%= form_with(model: [@chat, @message], id: "form", local: true) do |form| %>
+      <%= render 'layouts/error_messages', model: form.object %>
+      <%= form.text_area :text, placeholder: "コメント欄", rows: "2", class: "message-content", id: "messages" %>
+      <%= form.submit "コメントする", class: "message-btn", id: "submit" %>
     <% end %>
   </div>
   <div class="messages">
-    <h4>＜コメント一覧＞</h4>
+    <h4 class="list">＜コメント一覧＞</h4>
   </div>
   <div class ="message">
     <% if @messages.present? %>

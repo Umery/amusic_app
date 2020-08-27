@@ -21,7 +21,7 @@ class ChatsController < ApplicationController
 
   def show
     @message = Message.new
-    @messages = @chat.messages.includes(:user)
+    @messages = @chat.messages.includes(:user).order('created_at DESC')
   end
 
   def edit

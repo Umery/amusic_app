@@ -4,15 +4,17 @@
   <div class="leaning">
     <%= link_to "learning", '#', class: 'special-btn' %>
   </div>
-  <div class="fake-btn1"></div>
-  <div class="fake-btn2"></div>
+  <div class="fake-btn1", id="fake_btn1">
+    <%# <audio id="audio_btn1" src="audio1.mp3" preload="auto"></audio> %>
+  </div>
+  <div class="fake-btn2", id="audio_btn2"></div>
   <div class="question">
     <%= link_to "question", chats_path, class: 'special-btn' %>
   </div>
   <div class="playing">
     <%= link_to "playing", '#', class: 'special-btn' %>
   </div>
-  <div class="fake-btn3"></div>
+  <div class="fake-btn3", id="audio_btn3"></div>
 </div>
 </body>
 <%= render "shared/footer" %>

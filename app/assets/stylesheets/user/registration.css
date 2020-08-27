@@ -44,8 +44,8 @@
 
 .register-blue-btn {
   width: 100%;
-  background: #6f91da;
-  border: 1px solid #6f91da;
+  background: #272727;
+  border: 1px solid #272727;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
@@ -79,12 +79,16 @@
 
 .login-blue-btn {
   width: 100%;
-  background: #6f91da;
-  border: 1px solid #6f91da;
+  background: #272727;
+  border: 1px solid #272727;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+}
+
+.login-blue-btn:hover, .register-blue-btn:hover{
+  background: #888888;
 }
 
 .login-flash-message {

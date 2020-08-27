@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :chats do
     resources :messages, only: [:create, :destroy]
   end
+  resources :learns, only: [:index]
 end

@@ -1,8 +1,8 @@
 class CreateChoices < ActiveRecord::Migration[6.0]
   def change
     create_table :choices do |t|
-      t.string :content
-      t.boolean :answer
+      t.string :content, null: false
+      t.boolean :answer, null: false
       t.references :learn, null: false, foreign_key: true
       t.timestamps
     end

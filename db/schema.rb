@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_031401) do
+ActiveRecord::Schema.define(version: 2020_08_27_061953) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -43,6 +43,23 @@ ActiveRecord::Schema.define(version: 2020_08_25_031401) do
     t.index ["user_id"], name: "index_chats_on_user_id"
   end
 
+  create_table "choices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content"
+    t.boolean "answer"
+    t.bigint "learn_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["learn_id"], name: "index_choices_on_learn_id"
+  end
+
+  create_table "learns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "quiz", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_learns_on_user_id"
+  end
+
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "chat_id"
@@ -67,4 +84,6 @@ ActiveRecord::Schema.define(version: 2020_08_25_031401) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "chats", "users"
+  add_foreign_key "choices", "learns"
+  add_foreign_key "learns", "users"
 end

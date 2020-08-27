@@ -5,7 +5,7 @@
   <div class='account-page_header'>
     <h2>
       投稿者：
-      <a href="/users/<%= @chat.user.id %>", class= 'user-name'>
+      <a href="/users/<%= @chat.user_id %>", class= 'user-name'>
         <%= @chat.user.name %></a>
     </h2>
     <h5 class="page-btn">↑マイページへは名前をクリック</h5>
@@ -15,7 +15,7 @@
     <% end %>
     <%= link_to "質問一覧に戻る", chats_path, class: 'btn'%>
   </div>
-  <div class='user-form'>
+  <div class='chat-form'>
     <h2 class="chat-name">
       カテゴリー：
       <%= @chat.category.name %>
@@ -45,22 +45,28 @@
 <div class="container">
   <div class="message-area">
     <%= form_with(model: [@chat, @message], local: true) do |form| %>
-      <%= form.text_area :text, placeholder: "コメントする", rows: "2", class: "message-content" %>
-      <%= form.submit "SEND", class: "message-btn" %>
+      <%= form.text_area :text, placeholder: "コメント欄", rows: "2", class: "message-content" %>
+      <%= form.submit "コメントする", class: "message-btn" %>
     <% end %>
   </div>
   <div class="messages">
     <h4>＜コメント一覧＞</h4>
+  </div>
+  <div class ="message">
     <% if @messages.present? %>
+    <div class="user-message">
       <% @messages.each do |message| %>
-        <p>
-          <strong><%= link_to message.user.name, "/users/#{message.user_id}" %>：</strong>
-          <%= message.text %>
-        </p>
+        <div class="message-time">
+          <%= message.created_at%>
+        </div>
+        <div class="message-record">
+          <%= link_to message.user.name, "/users/#{message.user_id}", class: "user-messages" %>：<%= message.text %>
+        </div>
       <% end %>
     <% elsif %>
       <h4>まだコメントはありません</h4>
     <% end %>
+    </div>
   </div>
 </div>
 

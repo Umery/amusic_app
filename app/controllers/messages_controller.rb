@@ -2,8 +2,12 @@ class MessagesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    Message.create(message_params)
-    redirect_to "/chats/#{message.chat.id}"
+    @message = Message.new(message_params)
+    if @message.save
+       redirect_to "/chats/#{@message.chat.id}"
+    else
+       redirect_to "/chats/#{@message.chat.id}"
+    end
   end
 
   private

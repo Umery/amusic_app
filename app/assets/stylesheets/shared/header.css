@@ -18,9 +18,40 @@
   align-items: center;
 }
 
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #272727;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
+}
+
 .amusic-icon {
   width: 15vw;
   margin-right: 15vw;
+}
+
+.title-image {
+  height: 13vh;
+  display: flex;
+  margin-bottom: 5px;
 }
 
 .nav {
@@ -35,8 +66,18 @@
 .lists-left {
   display: flex;
   min-width: 200px;
+
+}
+
+.category-list {
+  text-decoration: none;
+  margin-right: 3vw;
   color: #333333;
-  font-size: 25px;
+}
+
+.brand-list {
+  text-decoration: none;
+  color: #333333;
 }
 
 .lists-right {
@@ -45,27 +86,18 @@
   align-items: flex-end;
 }
 
-/* show, chat/showにも反映 */
+
 .user-name {
   text-decoration: none;
   margin-right: 3vw;
   color: #333333;
   font-weight: bold;
-  font-size: 25px;
 }
 
-.users-name {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
-  font-size: 25px;
-}
 
 .logout {
   text-decoration: none;
   color: #333333;
-  font-size: 20px;
 }
 
 .login {
@@ -73,15 +105,14 @@
   line-height: 32px;
   margin-right: 3vw;
   color: #333333;
-  font-size: 20px;
 }
 
 .sign-up {
   text-decoration: none;
   color: #333333;
-  font-size: 20px;
 }
 
-.users-name:hover, .logout:hover, .login:hover, .sign-up:hover{
-  color: #8f8e8e;
+.root{
+  text-decoration: none;
+  color: #333333;
 }

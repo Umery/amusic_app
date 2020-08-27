@@ -1,3 +1,8 @@
+.chat-main{
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
 .chat-contents {
   background-color: #f8f8f8;
   display: flex;
@@ -19,7 +24,7 @@
   background-color: #f8f8f8;
 }
 
-.chats-info {
+.chat-info {
   height: 250px;
   width: 100%;
   background-color: #FFF;
@@ -28,23 +33,14 @@
   overflow: scroll;
 }
 
-.chats-info:hover{
-  background-color: #b4668c2d;
-}
-
-.chats-name{
-  font-size: 25px;
-  margin-top: 10px;
-}
-
-.chats-title{
+.chat-title{
   font-size: 2vh;
   text-decoration: none;
   border: none;
   margin-top: 20px;
 }
 
-.chats-content-box{
+.chat-content-box{
   font-size: 2vh;
   margin: 30px 0px;
   text-decoration: none;

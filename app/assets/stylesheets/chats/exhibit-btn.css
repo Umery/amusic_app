@@ -1,6 +1,6 @@
 .question-btn {
   width: 120px;
-  background: #b4668c;
+  background: #272727;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
@@ -22,5 +22,5 @@
 }
 
 .question-btn:hover{
-  background-color: #884d6a;
+  background-color: #5c5c5c;
 }

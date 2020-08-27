@@ -72,24 +72,16 @@ body {
   cursor: pointer;
 }
 
-.leaning:hover{
-  background-color: #709459;
-}
-
-.question:hover{
-  background-color: #945976;
-}
-
-.playing:hover{
-  background-color: #596c94;
+.leaning:hover, .question:hover, .playing:hover{
+  background-color: #5c5c5c;
 }
 
 .fake-btn1:hover{
-  background-color: #949059;
+  background-color: #945959;
 }
 
 .fake-btn2:hover{
-  background-color: #947559;
+  background-color: #849459;
 }
 
 .fake-btn3:hover{

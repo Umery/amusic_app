@@ -1,14 +1,5 @@
-.page-btn{
+.mypage-btn{
   margin-top: -30px;
-}
-
-.chat-form{
-  font-size: 20px;
-  font-weight: 200;
-  color: black;
-  width: 50%;
-  height: 80vh;
-  overflow: scroll;
 }
 
 .chat-name{
@@ -29,82 +20,3 @@
 .chat-image{
   margin-top: 40px;
 }
-
-.container {
-  width: 100%;
-  margin: 20px 0;
-  padding: 30px;
-  background-color: #f8f8f8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10vh 0;
-}
-
-.message-area{
-  display: flex;
-  justify-content: center;
-}
-
-.message-content{
-  font-size: 20px;
-  width: 50vw;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-}
-
-.message-btn{
-  font-size: 20px;
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  background-color: #d1d1d1;
-}
-
-.message-btn:hover{
-  background-color: #949393;
-}
-
-.messages {
-  padding: 5px;
-  margin-top: 15px;
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-}
-
-.message{
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  height: 40%;
-  overflow: scroll;
-}
-
-.user-message{
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-}
-
-.message-time{
-  font-size: 10px;
-  color: rgb(128, 128, 128);
-}
-
-.message-record{
-  display: flex;
-}
-
-.user-messages{
-  color: black;
-  font-weight: bold;
-  height: 20px;
-}
-
-.user-messages:hover {
-  color: #8f8e8e;
-}
-

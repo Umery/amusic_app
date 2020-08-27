@@ -1,8 +1,8 @@
 <%= render "shared/second-header"%>
 
-<h2 class="account-title"><%= @name %>さんのマイページ</h2>
 <div class='account-page'>
   <div class='account-page_header'>
+    <h2><%= @name %>さんのマイページ</h2>
     <% if user_signed_in? && current_user.id == @user.id%>
       <%= link_to "編集する", edit_user_path, class: 'btn'%>
     <% end %>
@@ -22,7 +22,7 @@
   <div class='chats-title'>
     <h3><%= @name %>さんの質問一覧</h3>
   </div>
-  <div class='chat-main'>
+  <div class='chat-mains'>
     <% if @chat.present? %>
       <h5>まだ<%= @name %>さんの質問はありません</h5>
     </div>
@@ -33,20 +33,20 @@
           <li class='list'>
             <%= link_to chat_path(chat.id) do %>
               <div class="chat-info">
-                <h3 class="chats-title">
+                <h3 class="chat-title">
                   カテゴリー：
                   <%= chat.category.name %>
                 </h3>
-                <h3 class="chats-title">
+                <h3 class="chat-title">
                   <%if chat.title.present?%>
                     質問名：
                     <%= chat.title %>
                   <% end %>
                 </h3>
-                <div class="chats-content-box">
+                <div class="chat-content-box">
                   <span>質問内容：<%= chat.content %></span>
                 </div>
-                <h3 class="chats-title">
+                <h3 class="chat-title">
                   <%if chat.image.present?%>
                     画像：あり
                   <% end %>

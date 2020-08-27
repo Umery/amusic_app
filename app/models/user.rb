@@ -16,4 +16,5 @@ class User < ApplicationRecord
   end
 
   has_many :chats
+  has_many :messages
 end

@@ -44,8 +44,13 @@ ActiveRecord::Schema.define(version: 2020_08_27_061953) do
   end
 
   create_table "choices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "content", null: false
-    t.boolean "answer", null: false
+    t.string "choice_1", null: false
+    t.string "choice_2", null: false
+    t.string "choice_3"
+    t.string "choice_4"
+    t.string "choice_5"
+    t.string "choice_6"
+    t.integer "answer", null: false
     t.bigint "learn_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -54,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_08_27_061953) do
 
   create_table "learns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "quiz", null: false
+    t.integer "number", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

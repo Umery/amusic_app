@@ -46,3 +46,16 @@
   display: flex;
   justify-content: center;
 }
+
+.learns_question{
+  display: none;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  justify-content: center;
+  color: black;
+}
+
+.text_s{
+  color: black;
+}

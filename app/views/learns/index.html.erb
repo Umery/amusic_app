@@ -3,18 +3,27 @@
 <div class="learn-main">
   <div class="learn-body">
     <div class="let-us-quiz">
-      <%= link_to '挑戦する', "/", class: "quiz-btn"%>
+      <button class="quiz-btn", id="quiz" >
+        挑戦する
+      </button>
+      <div class="learns_question", id="learns_question">
+        <h2>問題</h2>
+        <div id="text_q"></div>
+        <h2>選択</h2>
+        <div id="text_s", class="text_s"></div>
+        <h2>解答</h2>
+        <div id="text_a"></div>
+      </div>
     </div>
     <div class="create-quiz">
-      <%= link_to 'クイズを作る', "/", class: "quiz-btn"%>
+      <%#= link_to 'クイズを作る', new_learn_path, class: "quiz-btn"%>
     </div>
   </div>
   <div class="learn-footer">
-    <div class="index-quizes">
+    <%# <div class="index-quizes">
       クイズ一覧
     </div>
-    <div class="index-quiz"></div>
-      
+    <div class="index-quiz"></div> %>
   </div>
 </div>
 

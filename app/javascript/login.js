@@ -27,6 +27,7 @@ const login = () => {
   userEmail.addEventListener('click', function(){
     if (!userEmail.value) {
       userEmail.setAttribute("class", "error");
+      email_error2.style.display = "none";
       email_error1.style.display = "inline";
     } else {
       userEmail.setAttribute("class", "success");
@@ -49,6 +50,8 @@ const login = () => {
   userPass.addEventListener('click', function(){
     if (!userPass.value) {
       userPass.setAttribute("class", "error");
+      pass_error2.style.display = "none";
+      pass_error3.style.display = "none";
       pass_error1.style.display = "inline";
     } else {
       userPass.setAttribute("class", "success");

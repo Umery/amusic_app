@@ -1,0 +1,30 @@
+<%= render "shared/quiz-header" %>
+
+<div class="learn-main">
+  <div class="learn-body">
+    <div class="let-us-quiz">
+      <button class="quiz-btn", id="quiz" >
+        挑戦する
+      </button>
+      <div class="learns-question", id="learns_question">
+        <div class="quiz-title">
+          <h2>問題</h2>
+          <div id="quiz_title"></div>
+        </div>
+        <div class="quiz-select">
+          <h2>選択</h2>
+          <div id="quiz_select"></div>
+        </div>
+        <div class="quiz-answer">
+          <h2>解答</h2>
+          <div id="quiz_answer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="create-quiz">
+      <%#= link_to 'クイズを作る', new_learn_path, class: "quiz-btn"%>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/quiz-footer" %>

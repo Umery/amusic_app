@@ -1,16 +1,10 @@
 <header class='top-page-header'>
   <div class='bar-contents'>
-    <%= link_to image_tag("amusic-logo-question.png", class: "amusic-icon"), "/" %>
-    <form class="search-form" action="#">
-      <input class='input-box' placeholder='質問を検索する'>
-      <button class="search-button">
-        <%= image_tag "search.png", class:"search-icon" %>
-      </button>
-    </form>
+    <%= link_to image_tag("amusic-logo-learning.png", class: "amusic-icon"), "/" %>
   </div>
   <div class='nav'>
     <div class='lists-left'>
-      みんなの質問ページ
+      クイズ形式で勉強しよう！
     </div>
     <ul class='lists-right'>
       <% if user_signed_in? %>

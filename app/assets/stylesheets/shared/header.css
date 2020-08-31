@@ -34,9 +34,15 @@
 
 .lists-left {
   display: flex;
+  flex-direction: column;
   min-width: 200px;
   color: #333333;
   font-size: 25px;
+}
+
+.audio-caution{
+  color: red;
+  font-size: 10px;
 }
 
 .lists-right {

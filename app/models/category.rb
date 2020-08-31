@@ -1,9 +1,9 @@
 class Category < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
-    { id: 2, name: '基礎について' },
-    { id: 3, name: '譜面について' },
-    { id: 4, name: '音の種類について' },
+    { id: 2, name: 'クイズについて' },
+    { id: 3, name: '基礎について' },
+    { id: 4, name: '譜面について' },
     { id: 5, name: '和音について' },
     { id: 6, name: 'ピアノ、コーラスについて' },
     { id: 7, name: '金管楽器について' },

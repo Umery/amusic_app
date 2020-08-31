@@ -1,5 +1,4 @@
 require 'rails_helper'
 
-RSpec.describe "Plays", type: :request do
-
+RSpec.describe 'Plays', type: :request do
 end

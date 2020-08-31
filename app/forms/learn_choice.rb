@@ -7,7 +7,7 @@ class LearnChoice
     validates :number, numericality: { only_integer: true,
                                        greater_than_or_equal_to: 2,
                                        less_than_or_equal_to: 6 }
-                                       
+
     validates :choice
     validates :answer
   end

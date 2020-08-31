@@ -47,15 +47,18 @@
   justify-content: center;
 }
 
-.learns_question{
+.learns-question{
   display: none;
-  height: 100%;
-  width: 100%;
-  font-size: 20px;
+  height: 50vh;
+  width: 80vw;
   justify-content: center;
   color: black;
 }
 
-.text_s{
+.quiz-title, .quiz-select, .quiz-answer{
+  font-size: 25px;
+}
+
+.quiz-select a{
   color: black;
 }

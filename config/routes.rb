@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :messages, only: [:create, :destroy]
   end
   resources :learns, only: :index 
+  resources :plays, only: :index 
 end

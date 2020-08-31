@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_27_061953) do
+ActiveRecord::Schema.define(version: 2020_08_31_025929) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -44,13 +44,8 @@ ActiveRecord::Schema.define(version: 2020_08_27_061953) do
   end
 
   create_table "choices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "choice_1", null: false
-    t.string "choice_2", null: false
-    t.string "choice_3"
-    t.string "choice_4"
-    t.string "choice_5"
-    t.string "choice_6"
-    t.integer "answer", null: false
+    t.string "choice", null: false
+    t.boolean "answer", default: false, null: false
     t.bigint "learn_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -74,6 +69,13 @@ ActiveRecord::Schema.define(version: 2020_08_27_061953) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "plays", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_plays_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
@@ -92,4 +94,5 @@ ActiveRecord::Schema.define(version: 2020_08_27_061953) do
   add_foreign_key "chats", "users"
   add_foreign_key "choices", "learns"
   add_foreign_key "learns", "users"
+  add_foreign_key "plays", "users"
 end

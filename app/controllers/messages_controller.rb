@@ -3,12 +3,8 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    if @message.save
-      redirect_to "/chats/#{@message.chat.id}"
-      # render json:{ get: message }
-    else
-      redirect_to "/chats/#{@message.chat.id}"
-    end
+    @message.save
+    redirect_to "/chats/#{@message.chat.id}"
   end
 
   def destroy

@@ -13,6 +13,8 @@
 
 - has_many :chats
 - has_many :messages
+- has_many :learns
+- has_one :play
 
 ## chats テーブル
 
@@ -39,4 +41,39 @@
 ### Association
 
 - belongs_to :chat
+- belongs_to :user
+
+## learns テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| quiz     | string     | null: false                    |
+| numbers  | integer    | null: false                    |
+| user     | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- has_many :choices
+
+## messages テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| choice   | string     | null: false                    |
+| answer   | boolean    | null: false, default: false    |
+| learn_id | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :learn
+
+## plays テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| user     | references | null: false, foreign_key: true |
+
+### Association
+
 - belongs_to :user

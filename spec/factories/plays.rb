@@ -1,4 +1,4 @@
 FactoryBot.define do
-  factory :learn do
+  factory :play do
   end
 end

@@ -1,0 +1,19 @@
+<header class='top-page-header'>
+  <div class='bar-contents'>
+    <%= link_to image_tag("amusic-logo-playing.png", class: "amusic-icon"), "/" %>
+  </div>
+  <div class='nav'>
+    <div class='lists-left'>
+      ゲームで楽しもう！
+    </div>
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.name, "users/show", class: "users-name" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', "users/sign_in", class: "login" %></li>
+        <li><%= link_to '新規登録', "users/sign_up", class: "login" %></li>
+      <% end %>
+      <li><%= link_to "トップページに戻る", root_path, class: "root-btn"%></li>
+    </ul>
+  </div>
+</header>

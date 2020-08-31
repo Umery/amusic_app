@@ -17,5 +17,6 @@ class User < ApplicationRecord
 
   has_many :chats
   has_many :messages
-  has_many :learn
+  has_many :learns
+  has_one :play
 end

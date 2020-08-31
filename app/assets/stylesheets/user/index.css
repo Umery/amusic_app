@@ -43,7 +43,7 @@ body {
 }
 
 .fake-btn1{
-  background-color: #272727;
+  background-color: #3f3f3f;
   height: 70px;
   width: 70px;
   border-radius: 50%;
@@ -53,7 +53,7 @@ body {
 }
 
 .fake-btn2{
-  background-color: #272727;
+  background-color: #333333;
   height: 140px;
   width: 140px;
   border-radius: 50%;
@@ -63,7 +63,7 @@ body {
 }
 
 .fake-btn3{
-  background-color: #272727;
+  background-color: #313131;
   height: 120px;
   width: 120px;
   border-radius: 50%;

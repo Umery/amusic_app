@@ -2,6 +2,15 @@
   margin-top: -30px;
 }
 
+.user-chat-name{
+  font-size: 40px;
+  color: black;
+}
+
+.user-chat-name:hover{
+  color: #8f8e8e;
+}
+
 .chat-form{
   font-size: 20px;
   font-weight: 200;
@@ -9,6 +18,7 @@
   width: 50%;
   height: 80vh;
   overflow: scroll;
+  padding: 60px;
 }
 
 .chat-name{
@@ -108,3 +118,8 @@
   color: #8f8e8e;
 }
 
+@media (max-width: 960px) {
+  .page-btn{
+    font-size: 15px;
+  }
+}

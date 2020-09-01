@@ -49,3 +49,9 @@
   background-color: #b4668c;
   text-align: center;
 }
+
+@media (max-width: 960px) {
+  .root-btn{
+    font-size: 15px;
+  }
+}

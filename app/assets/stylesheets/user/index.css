@@ -96,71 +96,88 @@ body {
   background-color: #7c5994;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 960px) {
+  .special-btn{
+    font-size: 30px;
+  }
+  
   .leaning{
-    height: 272px;
-    width: 272px;
-    line-height: 272px;
-    font-size: 32px;
+    height: 238px;
+    width: 238px;
+    line-height: 238px;
+    margin-top: 5vh;
+    margin-left: 23vw;
   }
   
   .question{
-    height: 180px;
-    width: 180px;
-    line-height: 180px;
-    font-size: 27px;
+    background-color: black;
+    height: 210px;
+    width: 210px;
+    line-height: 210px;
+    margin-top: -150px;
+    margin-left: 70vw;
   }
   
   .playing{
-    height: 224px;
-    width: 224px;
-    line-height: 224px;
-    font-size: 32px;
+    background-color: black;
+    height: 196px;
+    width: 196px;
+    line-height: 196px;
+    margin-top: -30px;
+    margin-left: 10vw;
   }
   
   .fake-btn1{
-    height: 56px;
-    width: 56px;
+    height: 49px;
+    width: 49px;
+    margin-left: 60vw;
   }
   
   .fake-btn2{
-    height: 112px;
-    width: 112px;
+    height: 98px;
+    width: 98px;
   }
   
   .fake-btn3{
-    height: 96px;
-    width: 96px;
+    height: 84px;
+    width: 84px;
+    margin-left: 50vw;
+    margin-top: -10vh;
   }
- }
+}
 
- @media (max-width: 599px) {
+@media (max-width: 600px) {
+  .special-btn{
+    font-size: 20px;
+  }
+  
   .leaning{
-    height: 204px;
-    width: 204px;
-    line-height: 204px;
-    font-size: 24px;
+    height: 170px;
+    width: 170px;
+    line-height: 170px;
+    margin-left: 15vw;
   }
   
   .question{
-    height: 240px;
-    width: 240px;
-    line-height: 240px;
-    font-size: 36px;
-    margin-top: -64px;
-    margin-left: 56vw;
+    background-color: black;
+    height: 150px;
+    width: 150px;
+    line-height: 150px;
+    margin-top: -110px;
   }
   
   .playing{
-    height: 168px;
-    width: 168px;
-    line-height: 168px;
-    font-size: 24px;
+    background-color: black;
+    height: 140px;
+    width: 140px;
+    line-height: 140px;
+    margin-top: 0px;
   }
   
   .fake-btn1{
-    height: 48px;
-    width: 48px;
+    height: 35px;
+    width: 35px;
+    margin-top: -25vh;
   }
   
   .fake-btn2{
@@ -169,7 +186,9 @@ body {
   }
   
   .fake-btn3{
-    height: 72px;
-    width: 72px;
+    height: 60px;
+    width: 60px;
+    margin-left: 55vw;
+    margin-top: -9vh;
   }
- }
+}

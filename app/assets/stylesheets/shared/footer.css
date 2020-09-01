@@ -14,3 +14,9 @@
 .second-footer-logo{
   height: 130px;
 }
+
+@media (max-width: 960px) {
+  .second-footer-logo{
+    height: 100px;
+  }
+}

@@ -1,6 +1,5 @@
 .second-header {
   width: 100%;
-  min-width: 800px;
   height: 130px;
   background-color: #f8f8f8;
   display: flex;
@@ -10,5 +9,11 @@
 
 .second-logo {
   width: 180px;
-  height: 100px;
+
+}
+
+@media (max-width: 600px) {
+  .second-logo{
+    width: 150px;
+  }
 }

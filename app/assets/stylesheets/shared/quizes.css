@@ -10,9 +10,3 @@
   background-color: #5d7a4a;
   text-align: center;
 }
-
-@media (max-width: 480px) {
-  .quiz-footer {
-    padding: 1vh 0;
-  }
-}

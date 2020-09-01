@@ -17,9 +17,3 @@
     width: 150px;
   }
 }
-
-@media (max-width: 480px) {
-  .second-header {
-    height: 100px;
-  }
-}

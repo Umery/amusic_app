@@ -49,3 +49,9 @@
   background-color: #b4668c;
   text-align: center;
 }
+
+@media (max-width: 480px) {
+  .chat-footer {
+    padding: 1vh 0;
+  }
+}

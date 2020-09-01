@@ -33,3 +33,9 @@ h5{
 .chat-info:hover{
   background-color: #aaaaaa2d;
 }
+
+@media (max-width: 600px) {
+  .account-title{
+    font-size: 30px;
+  }
+}

@@ -1,8 +1,8 @@
 <%= render "shared/second-header"%>
 
+<h2 class="account-title">アカウントの編集</h2>
 <div class='account-page'>
   <div class='account-page_header'>
-    <h2>アカウントの編集</h2>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
     <%= link_to "マイページに戻る", user_path, class: 'btn'%>
   </div>

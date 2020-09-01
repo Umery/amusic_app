@@ -14,3 +14,15 @@
 .second-footer-logo{
   height: 130px;
 }
+
+@media (max-width: 960px) {
+  .second-footer-logo{
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1vh 0;
+  }
+}

@@ -1,5 +1,27 @@
 <%= render "shared/play-header" %>
   <div class="play-main">
-    未完成
+    <div class="piano">
+      <div data-sound="do" class="key white"></div>
+      <div class="black"></div>
+      <div data-sound="re" class="key white"></div>
+      <div class="black"></div>
+      <div data-sound="mi" class="key white"></div>
+      <div data-sound="fa" class="key white"></div>
+      <div class="black"></div>
+      <div data-sound="so" class="key white"></div>
+      <div class="black"></div>
+      <div data-sound="ra" class="key white"></div>
+      <div class="black"></div>
+      <div data-sound="si" class="key white"></div>
+      <div data-sound="do-2" class="key white"></div>
+    </div>
+    <audio id="do" src="assets/pianoC.mp3"></audio>
+    <audio id="re" src="assets/pianoD.mp3"></audio>
+    <audio id="mi" src="assets/pianoE.mp3"></audio>
+    <audio id="fa" src="assets/pianoF.mp3"></audio>
+    <audio id="so" src="assets/pianoG.mp3"></audio>
+    <audio id="ra" src="assets/pianoA.mp3"></audio>
+    <audio id="si" src="assets/pianoB.mp3"></audio>
+    <audio id="do-2" src="assets/pianoC2.mp3"></audio>
   </div>
 <%= render "shared/play-footer" %>

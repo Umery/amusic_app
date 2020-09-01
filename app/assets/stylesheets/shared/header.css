@@ -6,7 +6,7 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 5vh 15vw;
+  padding: 5vh 10vw;
   display: flex;
   flex-direction: column;
   background-color: #f8f8f8;
@@ -20,11 +20,9 @@
 
 .amusic-icon {
   width: 15vw;
-  margin-right: 15vw;
 }
 
 .nav {
-  font-size: 18px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -90,4 +88,77 @@
 
 .users-name:hover, .logout:hover, .login:hover, .sign-up:hover{
   color: #8f8e8e;
+}
+
+@media (max-width: 960px) {
+  .amusic-icon {
+    width: 13vw;
+    margin-left: -30px;
+  }
+  
+  .lists-left {
+    margin-left: -30px;
+    font-size: 15px;
+  }
+  
+  /* show, chat/showにも反映 */
+  .user-name {
+    margin-right: 3vw;
+    font-size: 15px;
+  }
+  
+  .users-name {
+    margin-right: 2vw;
+    font-size: 15px;
+  }
+  
+  .logout {
+    font-size: 15px;
+  }
+  
+  .login {
+    line-height: 25px;
+    margin-right: 1vw;
+    font-size: 15px;
+  }
+  
+  .sign-up {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .amusic-icon {
+    width: 20vw;
+    margin-left: -40px;
+  }
+
+  .lists-left {
+    font-size: 15px;
+    margin-left: -40px;
+  }
+
+  /* show, chat/showにも反映 */
+  .user-name {
+    margin-right: 1vw;
+    font-size: 15px;
+  }
+  
+  .users-name {
+    margin-right: 1vw;
+    font-size: 15px;
+  }
+  
+  .logout {
+    font-size: 15px;
+  }
+  
+  .login {
+    margin-right: 1vw;
+    font-size: 15px;
+  }
+  
+  .sign-up {
+    font-size: 15px;
+  }
 }

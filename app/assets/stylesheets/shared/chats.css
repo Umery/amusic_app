@@ -55,9 +55,3 @@
     font-size: 15px;
   }
 }
-
-@media (max-width: 480px) {
-  .chat-footer {
-    padding: 1vh 0;
-  }
-}

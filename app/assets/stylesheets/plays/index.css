@@ -33,3 +33,18 @@
 .black:hover{
   background-color: #353f53;
 }
+
+@media (max-width: 600px) {
+  .white{
+    width:60px;
+    height: 240px;
+  }
+  
+  .black{
+    width:36px;
+    height: 144px;
+    margin-left: -18px;
+    margin-right: -18px;
+    z-index: 1.5;
+  }
+}

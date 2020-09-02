@@ -1,5 +1,5 @@
 .search-form {
-  width: 65vw;
+  width: 50vw;
   height: 5vh;
   display: flex;
   margin-bottom: 5px;
@@ -15,16 +15,12 @@
   width: 5vh;
   border: 0;
   cursor: pointer;
+  /* background: url("../../images/search.png"); */
   background-color: #b4668c;
-  padding: 8px;
 }
 
 .search-button:hover{
   background-color: #884d6a;
-}
-
-.search-icon {
-  width: 100%;
 }
 
 .root-btn{

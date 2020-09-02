@@ -43,6 +43,10 @@ class ChatsController < ApplicationController
     end
   end
 
+  def search
+    @chats = Chat.search(params[:keyword])
+  end
+
   private
 
   def chat_params

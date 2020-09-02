@@ -22,6 +22,7 @@ class ChatsController < ApplicationController
   def show
     @message = Message.new
     @messages = @chat.messages.includes(:user).order('created_at DESC')
+    @like = Like.new
   end
 
   def edit

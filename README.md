@@ -12,6 +12,7 @@
 ### Association
 
 - has_many :chats
+- has_many :likes
 - has_many :messages
 - has_many :learns
 - has_one :play
@@ -29,6 +30,7 @@
 
 - belongs_to :user
 - has_many :messages
+- has_many :likes
 
 ## messages テーブル
 
@@ -42,6 +44,18 @@
 
 - belongs_to :chat
 - belongs_to :user
+
+## likes テーブル
+
+| Column  | Type       | Options                       |
+| ------- | ---------- | ————------------------------- |
+| user    | references | null: false, foreign_key: true|
+| chat    | references | null: false, foreign_key: true|
+
+### Association
+
+- belongs_to :user
+- belongs_to :chat
 
 ## learns テーブル
 

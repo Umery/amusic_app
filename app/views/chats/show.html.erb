@@ -14,6 +14,23 @@
       <%= link_to "削除する", chat_path, method: :delete, class: 'btn'%>
     <% end %>
     <%= link_to "質問一覧に戻る", chats_path, class: 'btn'%>
+
+    <div class="like-chat">
+      <div class="likes-num">いいね件数: <%= @chat.likes.count %></div>
+      <% if current_user.already_liked?(@chat) %>
+        <%= button_to chat_like_path(@chat), method: :delete, class: "likes-btn" do %>
+          <img src="/assets/likes.png" width="50" height="50">
+        <% end %>
+      <% else %>
+        <%= button_to chat_likes_path(@chat), class: "likes-btn" do %>
+          <img src="/assets/likes.png" width="50" height="50">
+        <% end %>
+      <% end %>
+      <div class="likes-num">いいねしたユーザー</div>
+      <% @chat.liked_users.each do |user| %>
+        <li class="likes-user"><%= user.name %></li>
+      <% end %>
+    </div>
   </div>
   <div class='chat-form'>
     <h2 class="chat-name">

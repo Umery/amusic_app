@@ -11,6 +11,25 @@
   color: #8f8e8e;
 }
 
+.like-chat{
+  margin: 80px 0 0;
+  height: 60vh;
+  overflow: scroll;
+}
+
+.likes-btn{
+  background-color: #f8f8f8;
+  border: none;
+}
+
+.likes-num {
+  font-size: 25px;
+}
+
+.likes-user{
+  font-size: 20px;
+}
+
 .chat-form{
   font-size: 20px;
   font-weight: 200;
@@ -18,7 +37,7 @@
   width: 50%;
   height: 80vh;
   overflow: scroll;
-  padding: 60px;
+  padding: 30px;
 }
 
 .chat-name{

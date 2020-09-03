@@ -5,6 +5,8 @@ class Chat < ApplicationRecord
 
   belongs_to :user
   has_many :messages
+  has_many :likes
+  has_many :liked_users, through: :likes, source: :user
 
   with_options presence: true do
     validates :category
@@ -13,4 +15,12 @@ class Chat < ApplicationRecord
 
   validates :category_id, numericality: { other_than: 1,
                                           message: 'を選択してください' }
+
+  def self.search(search)
+    if search != ""
+      Chat.where('content LIKE(?)', "%#{search}%")
+    else
+      Chat.all
+    end
+  end
 end

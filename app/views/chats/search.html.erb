@@ -26,14 +26,10 @@
             画像：あり
           <% end %>
         </h3>
-        <img src="/assets/likes.png" width="20" height="20">(<%= chat.liked_users.count %>)
       </div>
       <% end %>
     </li>
     <% end %>
   </ul>
-</div>
-<div class='question-btn'>
-  <%= link_to "質問する", new_chat_path, class: 'question-btn-text', method: :get %>
 </div>
 <%= render "shared/chat-footer" %>

@@ -15,13 +15,13 @@
       <div data-sound="si" class="key white"></div>
       <div data-sound="do-2" class="key white"></div>
     </div>
-    <audio id="do" src="assets/pianoC.mp3"></audio>
-    <audio id="re" src="assets/pianoD.mp3"></audio>
-    <audio id="mi" src="assets/pianoE.mp3"></audio>
-    <audio id="fa" src="assets/pianoF.mp3"></audio>
-    <audio id="so" src="assets/pianoG.mp3"></audio>
-    <audio id="ra" src="assets/pianoA.mp3"></audio>
-    <audio id="si" src="assets/pianoB.mp3"></audio>
-    <audio id="do-2" src="assets/pianoC2.mp3"></audio>
+    <audio id="do" src=<%= asset_path "pianoC.mp3"%> preload="auto"></audio>
+    <audio id="re" src=<%= asset_path "pianoD.mp3"%> preload="auto"></audio>
+    <audio id="mi" src=<%= asset_path "pianoE.mp3"%> preload="auto"></audio>
+    <audio id="fa" src=<%= asset_path "pianoF.mp3"%> preload="auto"></audio>
+    <audio id="so" src=<%= asset_path "pianoG.mp3"%> preload="auto"></audio>
+    <audio id="ra" src=<%= asset_path "pianoA.mp3"%> preload="auto"></audio>
+    <audio id="si" src=<%= asset_path "pianoB.mp3"%> preload="auto"></audio>
+    <audio id="do-2" src=<%= asset_path "pianoC2.mp3"%> preload="auto"></audio>
   </div>
 <%= render "shared/play-footer" %>

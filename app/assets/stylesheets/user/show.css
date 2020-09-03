@@ -34,6 +34,57 @@ h5{
   background-color: #aaaaaa2d;
 }
 
+.likes-contents {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.likes-title{
+  font-size: 2vh;
+  border: none;
+}
+
+.likes-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.likes-lists>.like-list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #f8f8f8;
+}
+
+.likes-info {
+  height: 250px;
+  width: 100%;
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+  overflow: scroll;
+}
+
+.likes-info:hover{
+  background-color: #aaaaaa2d;
+}
+
+.likes-name{
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.likes-content-box{
+  font-size: 2vh;
+  margin: 30px 0px;
+  text-decoration: none;
+  border: none;
+}
+
 @media (max-width: 600px) {
   .account-title{
     font-size: 30px;

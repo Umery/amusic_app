@@ -19,7 +19,7 @@
       <div class="likes-num">いいね件数: <%= @chat.likes.count %></div>
       <% if current_user.already_liked?(@chat) %>
         <%= button_to chat_like_path(@chat), method: :delete, class: "likes-btn" do %>
-          <img src="/assets/likes.png" width="50" height="50">
+          <img src=<%= asset_path "likes.png"%> width="50" height="50">
         <% end %>
       <% else %>
         <%= button_to chat_likes_path(@chat), class: "likes-btn" do %>

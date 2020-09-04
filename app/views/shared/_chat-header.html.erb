@@ -8,7 +8,7 @@
   </div>
   <div class='nav'>
     <div class='lists-left'>
-      みんなの質問ページ
+      <%= link_to "みんなの質問ページ", chats_path, class: "chat-index" %>
     </div>
     <ul class='lists-right'>
       <% if user_signed_in? %>

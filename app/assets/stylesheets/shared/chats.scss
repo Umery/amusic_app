@@ -22,13 +22,18 @@
   background-color: #884d6a;
 }
 
+.chat-index{
+  color: black;
+  font-weight: bold;
+}
+
 .root-btn{
   color: #333333;
   font-weight: bold;
   font-size: 20px;
 }
 
-.root-btn:hover{
+.root-btn:hover, .chat-index:hover{
   color: #8f8e8e;
 }
 

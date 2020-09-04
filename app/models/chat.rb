@@ -17,7 +17,7 @@ class Chat < ApplicationRecord
                                           message: 'を選択してください' }
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Chat.where('content LIKE(?)', "%#{search}%")
     else
       Chat.all

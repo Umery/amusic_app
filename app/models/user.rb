@@ -23,6 +23,6 @@ class User < ApplicationRecord
   has_one :play
 
   def already_liked?(chat)
-    self.likes.exists?(chat_id: chat.id)
+    likes.exists?(chat_id: chat.id)
   end
 end

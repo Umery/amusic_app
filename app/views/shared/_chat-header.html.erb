@@ -1,9 +1,9 @@
 <header class='top-page-header'>
   <div class='bar-contents'>
     <%= link_to image_tag(asset_path("amusic-logo-question.png"), class: "amusic-icon"), "/" %>
-      <%= form_with(url: search_chats_path, local: true, method: :get, class: "search-form") do |form| %>
+      <%= form_with(url: search_chats_path, local: true, method: :get, class: "search-form", id: "search_form") do |form| %>
         <%= form.text_field :keyword, placeholder: "質問を検索する", class: "input-box" %>
-        <%= form.submit type: "image", src: "assets/search.png", alt: "検索", class: "search-button" %>
+        <input type="image" name="submit" src=<%= asset_path "search.png"%> class="search-button" form="search_form" %>
       <% end %>
   </div>
   <div class='nav'>

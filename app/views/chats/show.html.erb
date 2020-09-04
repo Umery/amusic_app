@@ -23,7 +23,7 @@
         <% end %>
       <% else %>
         <%= button_to chat_likes_path(@chat), class: "likes-btn" do %>
-          <img src="/assets/likes.png" width="50" height="50">
+          <img src=<%= asset_path "likes.png"%> width="50" height="50">
         <% end %>
       <% end %>
       <div class="likes-num">いいねしたユーザー</div>

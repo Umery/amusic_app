@@ -56,5 +56,4 @@ https://amusic-2020.herokuapp.com/
 https://drive.google.com/file/d/1qslhgQEtuy8K5Zcjp29YzDe9Rrd61IJW/view?usp=sharing
 
 ## ローカルでの動作方法
-
 Ruby version:ruby 2.6.5p114

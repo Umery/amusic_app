@@ -1,20 +1,18 @@
 <%= render "shared/chat-second-header"%>
 
 <h2 class="account-title">質問詳細</h2>
+<h2 class="account-title">
+  投稿者:<a href="/users/<%= @chat.user_id %>", class= 'user-chat-name'><%= @chat.user.name %></a>
+</h2>
 <div class='account-page'>
   <div class='account-page_header'>
-    <h2>
-      投稿者：
-      <a href="/users/<%= @chat.user_id %>", class= 'user-chat-name'>
-        <%= @chat.user.name %></a>
-    </h2>
-    <h5 class="page-btn">↑マイページへは名前をクリック</h5>
-    <% if user_signed_in? && current_user.id == @chat.user.id%>
-      <%= link_to "編集する", edit_chat_path, class: 'btn'%>
-      <%= link_to "削除する", chat_path, method: :delete, class: 'btn'%>
-    <% end %>
-    <%= link_to "質問一覧に戻る", chats_path, class: 'btn'%>
-
+    <div class ="btn-form">
+      <% if user_signed_in? && current_user.id == @chat.user.id%>
+        <%= link_to "編集する", edit_chat_path, class: 'btn'%>
+        <%= link_to "削除する", chat_path, method: :delete, class: 'btn'%>
+      <% end %>
+      <%= link_to "質問一覧へ", chats_path, class: 'btn'%>
+    </div>
     <div class="like-chat">
       <div class="likes-num">いいね件数: <%= @chat.likes.count %></div>
       <% if current_user.already_liked?(@chat) %>
@@ -58,7 +56,6 @@
     </div>
   </div>
 </div>
-
 <div class="container">
   <div class="message-area">
     <%= form_with(model: [@chat, @message], id: "form", local: true) do |form| %>

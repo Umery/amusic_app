@@ -20,3 +20,9 @@
     height: 100px;
   }
 }
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 1vh 0;
+  }
+}

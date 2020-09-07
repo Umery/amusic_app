@@ -32,13 +32,13 @@ const learn = () => {
     question_answer[21] = ["一般的にドイツ語表記でGisの音と同じ音は？","ソ♯","ソ♭","ド♯","レ♯","シ♭","レ♭",1];
     question_answer[22] = ["一般的にドイツ語表記でGesの音と同じ音は？","ソ♯","ソ♭","ド♯","レ♯","シ♭","レ♭",2];
     question_answer[23] = ["大きくの意味を持つ音量記号はどれ？","pp","p","mp","mf","f","ff",5];
-    question_answer[24] = ["poco a pocoの意味は？","だんだん遅く","遅く","少しずつ","少しずつ遅く","今すぐ遅く","",1];
+    question_answer[24] = ["poco a pocoの意味は？","だんだん遅く","遅く","少しずつ","少しずつ遅く","今すぐ遅く","",3];
     question_answer[25] = ["少し大きくの意味を持つ音量記号はどれ？","pp","p","mp","mf","f","ff",4];
     question_answer[26] = ["6/8拍子は存在する？","存在する","存在しない","","","","",1];
     question_answer[27] = ["クレシェンドの意味は？","だんだん強く","だんだん速く","だんだん遅く","だんだん弱く","","",1];
     question_answer[28] = ["ディミヌエンドの意味は？","だんだん強く","だんだん速く","だんだん遅く","だんだん弱く","","",4];
     question_answer[29] = ["D.C.の意味は？","はじめに戻る","ダルセーニョに戻る","終わり","","","",1];
-    question_answer[30] = ["D S.の意味は？","はじめに戻る","ダルセーニョに戻る","終わり","","","",2];
+    question_answer[30] = ["D.S.の意味は？","はじめに戻る","ダルセーニョに戻る","終わり","","","",2];
     question_answer[31] = ["4/4拍子の時、4分音符の長さは？","0.5拍","1拍","1.5拍","2拍","3拍","4拍",2];
     question_answer[32] = ["4/4拍子の時、8分音符の長さは？","0.5拍","1拍","1.5拍","2拍","3拍","4拍",1];
     question_answer[33] = ["4/4拍子の時、2分音符の長さは？","0.5拍","1拍","1.5拍","2拍","3拍","4拍",4];
@@ -73,7 +73,7 @@ const learn = () => {
       select = "";
       for (num=1;num<=select_number;num++) {
         if (question_answer[random][num] != "") {
-          select += "【<a href='javascript:answer(" + num + ")' > " + num + ":" + question_answer[random][num] + " </a>】";
+          select += "【<a href='javascript:answer(" + num + ")' > " + question_answer[random][num] + " </a>】";
         }
       }
       document.getElementById("quiz_select").innerHTML = select;

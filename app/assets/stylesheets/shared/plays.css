@@ -10,3 +10,9 @@
   background-color: #596c94;
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  .play-footer {
+    padding: 1vh 0;
+  }
+}

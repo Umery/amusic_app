@@ -6,7 +6,7 @@ body {
 .special-btn{
   text-decoration: none;
   color: white;
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .leaning{
@@ -148,7 +148,7 @@ body {
 
 @media (max-width: 600px) {
   .special-btn{
-    font-size: 20px;
+    font-size: 25px;
   }
   
   .leaning{
@@ -159,7 +159,6 @@ body {
   }
   
   .question{
-    background-color: black;
     height: 150px;
     width: 150px;
     line-height: 150px;
@@ -167,7 +166,6 @@ body {
   }
   
   .playing{
-    background-color: black;
     height: 140px;
     width: 140px;
     line-height: 140px;
@@ -190,5 +188,40 @@ body {
     width: 60px;
     margin-left: 55vw;
     margin-top: -9vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .special-btn{
+    font-size: 30px;
+  }
+  
+  .leaning{
+    margin-left: 13vw;
+  }
+  
+  .question{
+    margin-top: -100px;
+    margin-left: 60vw;
+  }
+  
+  .playing{
+    margin-top: -20px;
+  }
+  
+  .fake-btn1{
+    margin-top: -25vh;
+  }
+  
+  .fake-btn2{
+    height: 65px;
+    width: 65px;
+  }
+  
+  .fake-btn3{
+    height: 50px;
+    width: 50px;
+    margin-left: 55vw;
+    margin-top: -5vh;
   }
 }

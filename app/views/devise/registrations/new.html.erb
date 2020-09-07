@@ -12,7 +12,7 @@
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">名前</label>
+      <label class="form-text", for="user_name">名前</label>
       <span class="indispensable">必須</span>
       <span id="name-error-message">※名前を入力してください</span>
     </div>
@@ -20,7 +20,7 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">メールアドレス</label>
+      <label class="form-text", for="user_email">メールアドレス</label>
       <span class="indispensable">必須</span>
       <span id="email-error-message1">※Emailを入力してください</span>
       <span id="email-error-message2">※Emailの形式では無いようです</span>
@@ -29,7 +29,7 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">パスワード</label>
+      <label class="form-text", for="user_password">パスワード</label>
       <span class="indispensable">必須</span>
       <span id="password-error-message1">※パスワードを入力して下さい</span>
       <span id="password-error-message2">※英字と数字の両方を含めて設定してください</span>
@@ -39,7 +39,7 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">パスワード(確認)</label>
+      <label class="form-text", for="user_password_confirmation">パスワード(確認)</label>
       <span class="indispensable">必須</span>
       <span id="password-confirmation-error-message">※同じパスワードを入力して下さい</span>
     </div>
@@ -47,9 +47,9 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">興味のある楽器</label>
+      <label class="form-text", for="user_instrument">興味のある楽器</label>
     </div>
-    <%= f.text_area :instrument, class:"input-default", placeholder:"例) furima太郎", maxlength:"40" %>
+    <%= f.text_area :instrument, class:"input-default", placeholder:"例) クラリネット", maxlength:"40" %>
   </div>
 
   <div class='register-btn'>

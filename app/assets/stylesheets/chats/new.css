@@ -132,3 +132,9 @@
 .back-btn:hover{
   background: rgb(85, 85, 85);
 }
+
+@media (max-width: 600px) {
+  .chats-main {
+    width: 80%;
+  }
+}

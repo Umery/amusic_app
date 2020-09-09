@@ -26,7 +26,9 @@
       <% end %>
       <div class="likes-num">いいねしたユーザー</div>
       <% @chat.liked_users.each do |user| %>
-        <li class="likes-user"><%= user.name %></li>
+        <ul likes-users>
+          <li class="likes-user">♪ <%= user.name %></li>
+        </ul>
       <% end %>
     </div>
   </div>
@@ -69,23 +71,14 @@
   </div>
   <div class ="message">
     <% if @messages.present? %>
-    <div class="user-message">
+    <div class="user-message", id='message'>
       <% @messages.each do |message| %>
         <div class="message-time">
           <%= message.created_at%>
         </div>
         <div class="message-record">
-          <%= link_to message.user.name, "/users/#{@message.user_id}", class: "user-messages" %>：<%= message.text %>
-          <%# <ul class="more_list">
-            <% if user_signed_in? && current_user.id == message.user_id %>
-              <%# <li> %>
-                <%#= link_to '編集', edit_tweet_path, method: :get %>
-              <%# </li>
-              <li>
-                <%= link_to '削除', chat_message_path(@message.id), method: :delete %>
-              <%# </li>
-            <% end %>
-          <%# </ul> %>
+          <p><%= link_to message.user.name, "/users/#{@message.user_id}", class: "user-messages" %>:
+          <%= message.text %></p>
         </div>
       <% end %>
     <% elsif %>

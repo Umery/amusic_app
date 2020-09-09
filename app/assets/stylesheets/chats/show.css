@@ -22,10 +22,13 @@
   font-size: 25px;
 }
 
-.likes-user{
-  font-size: 20px;
+.likes-users{
   overflow: scroll;
   height: 20vh;
+}
+
+.likes-user{
+  font-size: 20px;
 }
 
 .chat-form{

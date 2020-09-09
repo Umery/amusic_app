@@ -10,10 +10,16 @@ consumer.subscriptions.create("MessageChannel", {
   },
 
   received(data) {
-    const html = `<p>${data.content.text}</p>`;
-    const messages = document.getElementById('messages');
-    const newMessage = document.getElementById('message_text');
-    messages.insertAdjacentHTML('afterbegin', html);
-    newMessage.value='';
-  }
+  //   const html = 
+  //   `<div class="message-time">
+  //     ${data.created_at}
+  //   </div>
+  //   <div class="message-record">
+  //     <p>"<a href="/users/#{@message.user_id}', class: "user-messages"> ${data.user.name}</a>:${data.content.text}"</p>
+  //   </div>`;
+  //   const messages = document.getElementById('message');
+  //   const newMessage = document.getElementById('messages');
+  //   messages.insertAdjacentHTML('afterend', html);
+  //   newMessage.value='';
+  // }
 });

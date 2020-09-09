@@ -3,10 +3,9 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    if @message.save
-      ActionCable.server.broadcast 'message_channel', content: @message
-      # redirect_to "/chats/#{@message.chat.id}"
-    end
+    @message.save
+    # ActionCable.server.broadcast 'message_channel', content: @message
+    redirect_back(fallback_location: chat_messages_path)
   end
 
   def destroy

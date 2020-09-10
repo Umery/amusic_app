@@ -6,7 +6,7 @@ body {
 .special-btn{
   text-decoration: none;
   color: white;
-  font-size: 45px;
+  font-size: 60px;
 }
 
 .leaning{
@@ -98,7 +98,7 @@ body {
 
 @media (max-width: 960px) {
   .special-btn{
-    font-size: 30px;
+    font-size: 45px;
   }
   
   .leaning{
@@ -148,7 +148,7 @@ body {
 
 @media (max-width: 600px) {
   .special-btn{
-    font-size: 25px;
+    font-size: 35px;
   }
   
   .leaning{

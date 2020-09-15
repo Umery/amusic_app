@@ -1,6 +1,6 @@
 <%= render "shared/chat-second-header" %>
 
-<%= form_with model: @chat, class: "form-main", local: true do |f| %>
+<%= form_with model: @chat, url: chats_path, class: "form-main", local: true do |f| %>
 <div class="chats-main">
   <h2 class="chat-title">質問フォーム</h2>
     <div>
@@ -9,10 +9,14 @@
     <div class="form">
       <div class="chats-form">
         <div class="weight-bold-text">
-          カテゴリー
+          <div class="tag-field", id='tag-field'>
+            タグ
+          </div>
           <span class="indispensable-1">必須</span>
         </div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+        <%= f.text_field :name, class:"input-tag" %>
+        <div id="search-result">
+        </div>
         <div class="weight-bold-text">
           質問名
           <span class="indispensable-2">任意</span>

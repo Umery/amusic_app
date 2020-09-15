@@ -9,9 +9,10 @@ class ChatTag
 
   def save
     chat = Chat.create(title: title, content: content, user_id: user_id)
-    tag = Tag.create(name: name)
+    tag = Tag.where(name: name).first_or_initialize
+    tag.save
 
-    TweetTagRelation.create(tweet_id: tweet.id, tag_id: tag.id)
+    ChatTagRelation.create(chat_id: chat.id, tag_id: tag.id)
   end
 
 end

@@ -64,13 +64,17 @@
 
 .tag-field{
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: inline;
   margin-top: 10px;
 }
 
 .input-tag{
-  padding-left: 10px;
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  resize: none;
 }
 
 .chats-text {

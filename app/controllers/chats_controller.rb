@@ -44,8 +44,14 @@ class ChatsController < ApplicationController
     end
   end
 
+  def search_tag
+    return nil if params[:input] == ""
+    tag = Tag.where(['name LIKE ?', "%#{params[:input]}%"] )
+    render json:{ keyword: tag }
+  end
+
   def search
-    @chats = ChatTag.search(params[:keyword])
+    @chats = Chat.search(params[:keyword])
   end
 
   private
@@ -55,6 +61,6 @@ class ChatsController < ApplicationController
   end
 
   def set_chat
-    @chat = ChatTag.find(params[:id])
+    @chat = Chat.find(params[:id])
   end
 end

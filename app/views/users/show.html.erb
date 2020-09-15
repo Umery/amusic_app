@@ -34,6 +34,7 @@
             <%= link_to chat_path(chat.id) do %>
               <div class="chat-info">
                 <h3 class="chats-title">
+                  タグ：
                   <%chat.tags.each do |tag| %>
                     #<%=tag.name%>
                   <%end%>
@@ -75,6 +76,7 @@
                 投稿者名：<%=chat.user.name%>
               </h3>
               <h3 class="likes-title">
+                タグ：
                 <%chat.tags.each do |tag| %>
                   #<%=tag.name%>
                 <%end%>

@@ -1,6 +1,6 @@
 class ChatTag
   include ActiveModel::Model
-  attr_accessor :title, :content, :name, :user_id
+  attr_accessor :title, :content, :image, :name, :user_id
 
   with_options presence: true do
     validates :content
@@ -8,7 +8,7 @@ class ChatTag
   end
 
   def save
-    chat = Chat.create(title: title, content: content, user_id: user_id)
+    chat = Chat.create(title: title, content: content, image: image, user_id: user_id)
     tag = Tag.where(name: name).first_or_initialize
     tag.save
 

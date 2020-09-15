@@ -34,7 +34,8 @@
   </div>
   <div class='chat-form'>
     <h2 class="chat-name">
-      <%chat.tags.each do |tag| %>
+      タグ：
+      <%@chat.tags.each do |tag| %>
         #<%=tag.name%>
       <%end%>
     </h2>

@@ -9,10 +9,14 @@
     <div class="form">
       <div class="chats-form">
         <div class="weight-bold-text">
-          カテゴリー
+          <div class="tag-field", id='tag-field'>
+            タグ
+          </div>
           <span class="indispensable-1">必須</span>
         </div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+        <%= f.text_field :name, class:"input-tag" %>
+        <div id="search-result">
+        </div>
         <div class="weight-bold-text">
           質問名
           <span class="indispensable-2">任意</span>

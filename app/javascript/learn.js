@@ -87,7 +87,7 @@ const learn = () => {
       select = "";
       for (num=1;num<=select_number;num++) {
         if (question_answer[random][num] != "") {
-          select += "【<a href='javascript:answer(" + num + ")' > " + question_answer[random][num] + " </a>】";
+          select += "<a href='javascript:answer(" + num + ")' > " + question_answer[random][num] + " </a>";
         }
       }
       document.getElementById("quiz_select").innerHTML = select;
@@ -104,7 +104,7 @@ const learn = () => {
       } else {
         answers[count] = "×";
       }
-      select += answers[count] + question_answer[random][number];
+      select += answers[count] + " " + question_answer[random][number];
       document.getElementById("quiz_answer").innerHTML = select;
 
       //次の問題を表示
@@ -129,8 +129,8 @@ const learn = () => {
         select += "</table>";
         document.getElementById("quiz_title").innerHTML = select;
         //次の選択肢
-        select = "【<a href='/'>トップページに戻る</a>】";
-        select += "【<a href='/learns'>もう一度</a>】";
+        select = "<a href='/'>トップページに戻る</a>";
+        select += "<a href='/learns'>もう一度</a>";
         document.getElementById("quiz_select").innerHTML = select;
       }
     }

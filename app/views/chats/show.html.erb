@@ -34,8 +34,10 @@
   </div>
   <div class='chat-form'>
     <h2 class="chat-name">
-      カテゴリー：
-      <%= @chat.category.name %>
+      タグ：
+      <%@chat.tags.each do |tag| %>
+        #<%=tag.name%>
+      <%end%>
     </h2>
     <h2 class="chat-name">
       質問名：

@@ -7,11 +7,11 @@ class ChatsController < ApplicationController
   end
 
   def new
-    @chat = Chat.new
+    @chat = ChatTag.new
   end
 
   def create
-    @chat = Chat.new(chat_params)
+    @chat = ChatTag.new(chat_params)
     if @chat.save
       redirect_to chats_path
     else
@@ -44,6 +44,13 @@ class ChatsController < ApplicationController
     end
   end
 
+  def search_tag
+    return nil if params[:input] == ''
+
+    tag = Tag.where(['name LIKE ?', "%#{params[:input]}%"])
+    render json: { keyword: tag }
+  end
+
   def search
     @chats = Chat.search(params[:keyword])
   end
@@ -51,7 +58,7 @@ class ChatsController < ApplicationController
   private
 
   def chat_params
-    params.require(:chat).permit(:category_id, :title, :content, :image).merge(user_id: current_user.id)
+    params.require(:chat_tag).permit(:title, :content, :image, :name).merge(user_id: current_user.id)
   end
 
   def set_chat

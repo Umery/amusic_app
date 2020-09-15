@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :edit, :update]
   resources :chats do
+    collection do
+      get 'search_tag'
+    end
     resources :messages, only: :create
     collection do
       get 'search'

@@ -13,7 +13,7 @@ class ChatsController < ApplicationController
   def create
     @chat = ChatTag.new(chat_params)
     if @chat.save
-      return redirect_to chats_path
+      redirect_to chats_path
     else
       render :new
     end
@@ -45,9 +45,10 @@ class ChatsController < ApplicationController
   end
 
   def search_tag
-    return nil if params[:input] == ""
-    tag = Tag.where(['name LIKE ?', "%#{params[:input]}%"] )
-    render json:{ keyword: tag }
+    return nil if params[:input] == ''
+
+    tag = Tag.where(['name LIKE ?', "%#{params[:input]}%"])
+    render json: { keyword: tag }
   end
 
   def search

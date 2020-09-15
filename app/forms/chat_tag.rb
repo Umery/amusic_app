@@ -14,5 +14,4 @@ class ChatTag
 
     ChatTagRelation.create(chat_id: chat.id, tag_id: tag.id)
   end
-
 end

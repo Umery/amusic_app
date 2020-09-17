@@ -1,4 +1,4 @@
-const audio = () => {
+window.addEventListener("DOMContentLoaded", () => {
 
   const fakeBtn1 = document.getElementById("fake_btn1");
   const fakeBtn2 = document.getElementById("fake_btn2");
@@ -202,6 +202,4 @@ const audio = () => {
       document.getElementById("audio20").play();
     };
   });
-}
-
-window.addEventListener("load",audio)
+});

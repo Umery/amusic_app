@@ -68,7 +68,7 @@
   </div>
   <div class='likes-contents'>
     <ul class ="likes-lists">
-      <% @user.liked_chats.each do |chat| %>
+      <% @user.like_chats.each do |chat| %>
         <li class='like-list'>
           <%= link_to chat_path(chat.id) do %>
             <div class="likes-info">

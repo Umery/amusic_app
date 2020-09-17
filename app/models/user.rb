@@ -18,11 +18,7 @@ class User < ApplicationRecord
   has_many :chats
   has_many :messages
   has_many :likes, dependent: :destroy
-  has_many :liked_chats, through: :likes, source: :chat
+  has_many :like_chats, through: :likes, source: :chat
   has_many :learns
   has_one :play
-
-  def already_liked?(chat)
-    likes.exists?(chat_id: chat.id)
-  end
 end

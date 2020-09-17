@@ -1,0 +1,12 @@
+<div class="likes-num">いいね件数: <%= @chat.likes.count %></div>
+<% if chat.liked_by?(current_user) %>
+  <%= link_to image_tag(asset_path("likes.png"), class: "likes-btn"), chat_like_path(chat.id), method: :delete, remote: true %>
+<% else %>
+  <%= link_to image_tag(asset_path("likes.png"), class: "likes-btn"), chat_likes_path(chat.id), method: :post, remote: true %>
+<% end %>
+<div class="likes-num">いいねしたユーザー</div>
+<% @chat.likes.each do |user| %>
+  <ul likes-users>
+    <li class="likes-user">♪ <%= user.name %></li>
+  </ul>
+<% end %>

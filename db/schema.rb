@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 2020_09_15_070832) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["chat_id"], name: "index_likes_on_chat_id"
+    t.index ["user_id", "chat_id"], name: "index_likes_on_user_id_and_chat_id", unique: true
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 

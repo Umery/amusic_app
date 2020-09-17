@@ -1,12 +1,13 @@
 class LikesController < ApplicationController
   def create
-    @like = current_user.likes.create(chat_id: params[:chat_id])
-    redirect_back(fallback_location: root_path)
+    @chat = Chat.find(params[:chat_id])
+    @like = current_user.likes.build(chat_id: params[:chat_id])
+    @like.save
   end
 
   def destroy
+    @chat = Chat.find(params[:chat_id])
     @like = Like.find_by(chat_id: params[:chat_id], user_id: current_user.id)
     @like.destroy
-    redirect_back(fallback_location: root_path)
   end
 end

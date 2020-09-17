@@ -1,8 +1,8 @@
 class CreateLikes < ActiveRecord::Migration[6.0]
   def change
     create_table :likes do |t|
-      t.references :chat, null: false, foreign_key: true
-      t.references :user, null: false, foreign_key: true
+      t.integer :user_id
+      t.integer :chat_id
 
       t.timestamps
       t.index [:user_id, :chat_id], unique: true

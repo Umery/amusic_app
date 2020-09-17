@@ -7,6 +7,6 @@
 <div class="likes-num">いいねしたユーザー</div>
 <% @chat.likes.each do |user| %>
   <ul likes-users>
-    <li class="likes-user">♪ <%= user.name %></li>
+    <li class="likes-user">♪ <%= user.user.name %></li>
   </ul>
 <% end %>

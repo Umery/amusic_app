@@ -16,6 +16,7 @@
 .likes-btn{
   background-color: #f8f8f8;
   border: none;
+  height: 50px;
 }
 
 .likes-num {

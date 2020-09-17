@@ -28,7 +28,7 @@
             画像：あり
           <% end %>
         </h3>
-        <img src=<%= asset_path "likes.png"%> width="20" height="20">(<%= chat.liked_users.count %>)
+        <img src=<%= asset_path "likes.png"%> width="20" height="20">(<%= chat.likes.count %>)
       </div>
       <% end %>
     </li>
@@ -36,6 +36,6 @@
   </ul>
 </div>
 <div class='question-btn'>
-  <%= link_to "質問する", new_chat_path, class: 'question-btn-text', method: :get %>
+  <%= link_to "投稿する", new_chat_path, class: 'question-btn-text', method: :get, data: {"turbolinks" => false} %>
 </div>
 <%= render "shared/chat-footer" %>

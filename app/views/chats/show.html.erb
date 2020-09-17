@@ -13,23 +13,8 @@
       <% end %>
       <%= link_to "質問一覧へ", chats_path, class: 'btn'%>
     </div>
-    <div class="like-chat">
-      <div class="likes-num">いいね件数: <%= @chat.likes.count %></div>
-      <% if current_user.already_liked?(@chat) %>
-        <%= button_to chat_like_path(@chat), method: :delete, class: "likes-btn" do %>
-          <img src=<%= asset_path "likes.png"%> width="50" height="50">
-        <% end %>
-      <% else %>
-        <%= button_to chat_likes_path(@chat), class: "likes-btn" do %>
-          <img src=<%= asset_path "likes.png"%> width="50" height="50">
-        <% end %>
-      <% end %>
-      <div class="likes-num">いいねしたユーザー</div>
-      <% @chat.liked_users.each do |user| %>
-        <ul likes-users>
-          <li class="likes-user">♪ <%= user.name %></li>
-        </ul>
-      <% end %>
+    <div class="like-chat", id="like_<%= @chat.id %>">
+      <%= render partial: 'likes/like', locals: { chat: @chat} %>
     </div>
   </div>
   <div class='chat-form'>
@@ -60,34 +45,8 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="message-area">
-    <%= form_with(model: [@chat, @message], id: "form", local: true) do |form| %>
-      <%= render 'layouts/error_messages', model: form.object %>
-      <%= form.text_area :text, placeholder: "コメント欄", rows: "2", class: "message-content", id: "messages" %>
-      <%= form.submit "コメントする", class: "message-btn", id: "submit" %>
-    <% end %>
-  </div>
-  <div class="messages">
-    <h4 class="list">＜コメント一覧＞</h4>
-  </div>
-  <div class ="message">
-    <% if @messages.present? %>
-    <div class="user-message", id='message'>
-      <% @messages.each do |message| %>
-        <div class="message-time">
-          <%= message.created_at%>
-        </div>
-        <div class="message-record">
-          <p><%= link_to message.user.name, "/users/#{@message.user_id}", class: "user-messages" %>:
-          <%= message.text %></p>
-        </div>
-      <% end %>
-    <% elsif %>
-      <h4>まだコメントはありません</h4>
-    <% end %>
-    </div>
-  </div>
+<div class="container" id="message_<%= @chat.id %>">
+  <%= render partial: 'messages/message', locals: { chat: @chat} %>
 </div>
 
 <%= render "shared/chat-footer"%>

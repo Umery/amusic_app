@@ -1,6 +1,6 @@
 <header class='top-page-header'>
   <div class='bar-contents'>
-    <%= link_to image_tag(asset_path("amusic-logo.png"), class: "amusic-icon"), "/" %>
+    <%= link_to image_tag(asset_path("amusic-logo.png"), class: "amusic-icon"), "/", data: {"turbolinks" => false} %>
   </div>
   <div class='nav'>
     <div class='lists-left'>
@@ -15,7 +15,7 @@
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
     <% else %>
       <li><%= link_to 'ログイン', "users/sign_in", class: "login" %></li>
-      <li><%= link_to '新規登録', "users/sign_up", class: "sign-up" %></li>
+      <li><%= link_to '新規登録', "users/sign_up", class: "sign-up", data: {"turbolinks" => false} %></li>
     <% end %>
     </ul>
   </div>

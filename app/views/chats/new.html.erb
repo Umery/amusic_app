@@ -2,7 +2,7 @@
 
 <%= form_with model: @chat, url: chats_path, class: "form-main", local: true do |f| %>
 <div class="chats-main">
-  <h2 class="chat-title">質問フォーム</h2>
+  <h2 class="chat-title">投稿フォーム</h2>
     <div>
       <%= render 'layouts/error_messages', model: f.object %>
     </div>
@@ -15,10 +15,10 @@
           <span class="indispensable-1">必須</span>
         </div>
         <%= f.text_field :name, class:"input-tag", placeholder:"(例)質問、クイズ、楽器、その他" %>
-        <div id="search-result">
+        <div id="search-result" data-no-turbolink>
         </div>
         <div class="weight-bold-text">
-          質問名
+          投稿名
           <span class="indispensable-2">任意</span>
         </div>
         <%= f.text_area :title, class:"chats-text", placeholder:"(例)どうすれば腹式呼吸が上手くできますか", maxlength:"40" %>
@@ -43,7 +43,7 @@
     </div>
 
     <div class="chat-btn-contents">
-      <%= f.submit "質問する" ,class:"chats-btn" %>
+      <%= f.submit "投稿する" ,class:"chats-btn" %>
       <%=link_to 'もどる', chats_path, class:"back-btn" %>
     </div>
   <% end %>

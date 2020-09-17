@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     collection do
       get 'search_tag'
     end
-    resources :messages, only: :create
+    resources :messages, only: [:create]
     collection do
       get 'search'
     end

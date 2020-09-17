@@ -2,9 +2,9 @@
 <body>
 <div class = "main">
   <div class="leaning">
-    <%= link_to "quiz", learns_path, class: 'special-btn' %>
+    <%= link_to "quiz", learns_path, class: 'special-btn', data: {"turbolinks" => false} %>
   </div>
-  <div class="fake-btn1", id="fake_btn1">
+  <div class="fake-btn1", id="fake_btn1" data-no-turbolink>
     <audio id="audio1" src=<%= asset_path "audio1.mp3"%> preload="auto"></audio>
     <audio id="audio2" src=<%= asset_path "audio2.mp3"%> preload="auto"></audio>
     <audio id="audio3" src=<%= asset_path "audio3.mp3"%> preload="auto"></audio>
@@ -26,14 +26,14 @@
     <audio id="audio19" src=<%= asset_path "audio19.mp3"%> preload="auto"></audio>
     <audio id="audio20" src=<%= asset_path "audio20.mp3"%> preload="auto"></audio>
   </div>
-  <div class="fake-btn2", id="fake_btn2"></div>
+  <div class="fake-btn2", id="fake_btn2" data-no-turbolink></div>
   <div class="question">
     <%= link_to "chat", chats_path, class: 'special-btn' %>
   </div>
   <div class="playing">
-    <%= link_to "game", plays_path, class: 'special-btn' %>
+    <%= link_to "game", plays_path, class: 'special-btn', data: {"turbolinks" => false} %>
   </div>
-  <div class="fake-btn3", id="fake_btn3"></div>
+  <div class="fake-btn3", id="fake_btn3" data-no-turbolink></div>
 </div>
 </body>
 <%= render "shared/footer" %>

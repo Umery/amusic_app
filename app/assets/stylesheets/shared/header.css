@@ -52,6 +52,7 @@
 /* show, chat/showにも反映 */
 .user-name {
   text-decoration: none;
+  margin-top: 15px;
   margin-right: 3vw;
   color: #333333;
   font-weight: bold;

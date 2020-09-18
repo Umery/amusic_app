@@ -8,10 +8,10 @@
   <div class='account-page_header'>
     <div class ="btn-form">
       <% if user_signed_in? && current_user.id == @chat.user.id%>
-        <%= link_to "編集する", edit_chat_path, class: 'btn'%>
+        <%# <%= link_to "編集する", edit_chat_path, class: 'btn'%>
         <%= link_to "削除する", chat_path, method: :delete, class: 'btn'%>
       <% end %>
-      <%= link_to "質問一覧へ", chats_path, class: 'btn'%>
+      <%= link_to "質問一覧", chats_path, class: 'btn'%>
     </div>
     <div class="like-chat", id="like_<%= @chat.id %>">
       <%= render partial: 'likes/like', locals: { chat: @chat} %>

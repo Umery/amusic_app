@@ -3,10 +3,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
-    @name = current_user.name
-    @instrument = current_user.instrument
-    @chats = current_user.chats.order('created_at DESC')
+    @user = User.find_by(id: params[:id])
+    @name = @user.name
+    @instrument = @user.instrument
+    @chats = @user.chats.order('created_at DESC')
   end
 
   def edit

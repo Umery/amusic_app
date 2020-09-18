@@ -3,7 +3,7 @@ class ChatsController < ApplicationController
   before_action :set_chat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @chats = Chat.all.order('created_at DESC')
+    @chats = Chat.includes(:user).all.order('created_at DESC')
   end
 
   def new
@@ -29,7 +29,7 @@ class ChatsController < ApplicationController
   end
 
   def update
-    if @chat.update(chat_params)
+    if @chat.update(chats_params)
       redirect_to action: :show
     else
       render :edit
@@ -56,6 +56,10 @@ class ChatsController < ApplicationController
   end
 
   private
+
+  def chats_params
+    params.permit(:title, :content, :image, :name).merge(user_id: current_user.id)
+  end
 
   def chat_params
     params.require(:chat_tag).permit(:title, :content, :image, :name).merge(user_id: current_user.id)

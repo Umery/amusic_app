@@ -7,7 +7,7 @@ class Chat < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :users, through: :likes
   has_many :chat_tag_relations, dependent: :destroy
-  has_many :tags, through: :chat_tag_relations, dependent: :destroy
+  has_many :tags, through: :chat_tag_relations
 
   def self.search(search)
     if search != ''

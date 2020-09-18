@@ -12,7 +12,7 @@
     </div>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-        <li><%= link_to current_user.name, "users/show", class: "users-name" %></li>
+        <li><%= link_to current_user.name, "/users/#{current_user.id}", class: "users-name" %></li>
       <% else %>
         <li><%= link_to 'ログイン', "users/sign_in", class: "login" %></li>
         <li><%= link_to '新規登録', "users/sign_up", class: "login", data: {"turbolinks" => false} %></li>

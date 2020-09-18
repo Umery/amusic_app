@@ -6,7 +6,7 @@
     <% if current_user.id == @user.id %>
       <%#= link_to "編集する", edit_user_path, class: 'btn'%>
     <% end %>
-    <%= link_to "トップページ", root_path, class: 'btn'%>
+    <%= link_to "トップページ", root_path, class: 'btn', data: {"turbolinks" => false}%>
     <%= link_to "質問一覧", chats_path, class: 'btn'%>
   </div>
   <div class='user-form'>

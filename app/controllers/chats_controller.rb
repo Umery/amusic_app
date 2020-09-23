@@ -29,6 +29,7 @@ class ChatsController < ApplicationController
   end
 
   def update
+    
     if @chat.update(chats_params)
       redirect_to action: :show
     else
@@ -58,7 +59,7 @@ class ChatsController < ApplicationController
   private
 
   def chats_params
-    params.permit(:title, :content, :image, :name).merge(user_id: current_user.id)
+    params.require(:chat_tag).permit(:title, :content, :image, :name).merge(user_id: current_user.id)
   end
 
   def chat_params

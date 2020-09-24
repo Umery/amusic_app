@@ -10,6 +10,5 @@ class LikesController < ApplicationController
     @chat = Chat.find(params[:chat_id])
     @like = Like.find_by(chat_id: params[:chat_id], user_id: current_user.id)
     @like.destroy
-    redirect_back(fallback_location: root_path)
   end
 end

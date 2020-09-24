@@ -14,9 +14,9 @@ require("../learn")
 require("../play")
 require("../tag")
 
-//= require jquery 
 //= require rails-ujs 
-//= require turbolinks
+//= require turbolinks 
+//= require jquery 
 //= require jquery_ujs 
 //= require_tree .
 
